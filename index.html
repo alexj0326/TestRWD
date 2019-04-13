@@ -1,81 +1,147 @@
-<!--宣告檔案為 HTML 5 註解 CTRL + 反斜線 -->
 <!DOCTYPE html>
-<!-- 宣告網頁範圍 -->
-<html>
-<!-- 網頁資訊 -->
+<html lang="zw-th">
 
 <head>
-    <!-- 網頁標題 -->
-    <title>我的第一個網頁</title>
-    <!-- 避免亂碼 -->
-    <meta charset="utf-8">
-    <!-- 網頁 icon  -->
-    <!--<link rel="shortcut icon" href="favicon_1.ico" type="image/x-icon" >-->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <!-- 網頁作者 -->
-    <meta name="author" content="Alex">
-    <!-- 關鍵字 -->
-    <meta name="keywords" content="職訓">
-    <!-- 說明/敘述 -->
-    <meta name="description" content="這是我的第一個網頁">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
 
-    </hed>
-    <!-- 網頁內容 -->
+<!--
 
-<body></body>
-<!-- 標題 -->
-<h1>大標題</h1>
-<h2>大標題</h2>
-<h3>大標題</h3>
-<h4>大標題</h4>
-<h5>大標題</h5>
-<h6 id="myh6">大標題</h6>
-<!-- 分隔線 -->
-<hr>
-<!-- 段落 -->
-<p>段落<br>段落</p>
-<p>段落段落</p>
-<!-- 粗體 -->
-<p><b>變成粗體</b></p>
-<!-- 斜體 -->
-<p><i>變成斜體</i></p>
-<!-- 超連結 href="連結" target="目標" title="說明文字"-->
-<a href="https://github.com/" target="_blank" title=github>點我去github</a>
-<a href="#myh6" title=點我>點我去h6</a>
-<a href="#" title=點我>回頁首</a>
-<hr>
-<!-- 項目符號 ul群組  li項目 -->
-<ul>
-    <li>項目一</li>
-    <li>項目二</li>
-</ul>
+    CSS 套用順序
+    行內 -- > 頁面內的 -- > 外部檔案
+    !important 強制使用此 CSS 樣式喔
+-->
 
-<ol start="50">
-    <li>項目一</li>
-    <li>項目二</li>
-</ol>
-<hr>
-<!-- img 圖片 
-                src 路徑
-                alt 替代文字，找不到圖片時顯示的文字
-                title 說明
-                height 高度 width 寬度 
+    <style>
+        h1{
+            /*文字顏色*/
+            color:red !important ; 
 
-
-                路徑寫法
-                ./ 目前資料夾
-                ../ 上一層
-                ../../ 上一層的上一層    
+        }
         
+        /* . 代表class  */
+        
+        .blue{
+            /*文字顏色*/
+            color:seagreen !important ; 
+        } 
+
+        .big{
+            /*文字大小*/
+            font-size: 100px !important;    
+
+        }
+        /*斜體*/
+        .italic{
+            font-style: italic;
+
+        }
+        /*粗體*/
+
+        .bold{
+            /* bold 粗體 boldr 加粗 */
+            font-weight: boldr;
+
+        }
+
+        /*  * 號代表網頁所有東西   'Courier New', Courier, monospace, */
+        /*  'Libre Baskerville' 使用 Google Font  
+           搭配 <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+        */
+
+        *{
+
+            font-family: 'Libre Baskerville', '微軟正黑體'
+
+        }
+
+        .center{
+            /* 文字位置 left:左 center:中 right:右  */
+            text-align: center;
+        }
+    
+        .blue.center{
+            /*
+                overline 上面的線
+                line-through 刪除線
+                underline 底線
+            */
+            text-decoration: underline;
+
+        }
+
+        a{
+
+            text-decoration: none;
+            color: green;
+        }
+
+        a:hover{
+
+            color:tomato;
+        }
+
+        a:visited{
+
+            color:violet;
+        }
+
+        a:active{
+
+            color:yellowgreen ;
+
+        }
+
+        .shadow{
+
+            /* text-shadow 水平距離 垂直距離 模糊距離  顏色 */
+            text-shadow: 5px 5px 5px red;
+
+        }
+
+        .shadow1{
+
+            /* text-shadow 水平距離 垂直距離 模糊距離  顏色 */
+            text-shadow: 0px 0px 10px red;
+
+        }
+
+        p:hover{
+
+            color: blue;
+            text-shadow: 0px 0px 10px red;
+
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+        <!--
+        顏色格式
+        名稱 : / #rgb / #rrggbb / rgb(0~255, 0~255, 0~255) /  rgba(0~255, 0~255, 0~255, 0.0~1.0)
         -->
-<img src="./Lighthouse.jpg" alt="燈塔" width="100px" height="100px">
-<img src="./image/Tulips.jpg" alt="花" width="100px" height="100px">
+        <h1 style="color:blue"> Alex </h1>
+        <h2 > Alex Text 1 </h2>
+        <h2 style="color:rosybrown" > Alex Text </h2>
+        <h2 class="blue big"> Alex Text 2 </h2>
+        <h3 class="big italic">Alex Text 3</h3>
+        <h4 class="big bold">Alex Text 4</h4>
+        <p class="big"> 關務署  </p>   
+        <p class="bold big blue center shadow"> Tradevan  </p>   
+        <p class="bold big blue center shadow1"> 泰山職訓中心  </p>   
 
-
-
-
+        <a href="http://https://tw.yahoo.com/">yahoo</a>
 
 </body>
+
+
 
 
 </html>
